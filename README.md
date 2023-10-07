@@ -1,4 +1,4 @@
-# unhide-html
+# unhide-html-ext
 
 > Unhide-HTML is a boilerplate Chrome extension tool built with Vite, Preact, and Manifest V3. It automatically reveals hidden HTML content on the current page and scans for critical files/parameters within bundled JavaScript code
 
@@ -13,7 +13,7 @@
 run the command
 
 ```shell
-$ cd unhide-html
+$ cd unhide-html-ext
 
 $ npm run dev
 ```
@@ -21,7 +21,7 @@ $ npm run dev
 ### Chrome Extension Developer Mode
 
 1. set your Chrome browser 'Developer mode' up
-2. click 'Load unpacked', and select `unhide-html/build` folder
+2. click 'Load unpacked', and select `unhide-html-ext/build` folder
 
 ### Nomal FrontEnd Developer Mode
 
