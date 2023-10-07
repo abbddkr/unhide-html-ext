@@ -1,6 +1,4 @@
-import React from 'react';
 import Accordion from 'react-bootstrap/Accordion';
-
 function StaticFileList({ files }) {
   
   const totalFileCount = files.reduce((count, col) => {

@@ -1,6 +1,4 @@
-import React from 'react';
 import Accordion from 'react-bootstrap/Accordion';
-
 function ParametersList({ parameterKeys }) {
 
   const totalWordCount = parameterKeys.reduce((count, col) => {
