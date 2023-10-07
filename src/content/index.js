@@ -77,11 +77,11 @@ export async function extractAvailableScriptsFromNode(node) {
   for (let i = 0; i < list.length; i++) {
     if (list[i].getAttribute('src')) {
       var scriptSrc = list[i].getAttribute('src')
-
-      if (scriptSrc.startsWith('/')) {
-        scriptArr.push(new URL(currentTabOrigin.url).origin + scriptSrc)
-      } else if (scriptSrc.startsWith('./')) {
-        scriptArr.push(currentTabOrigin.url + scriptSrc)
+      if (scriptSrc.startsWith('//')) {
+        scriptArr.push(scriptSrc)
+      } else if (scriptSrc.startsWith('./') || scriptSrc.startsWith('/')) {
+        const fullUrl = new URL(scriptSrc, currentTabOrigin.url).href;
+        scriptArr.push(fullUrl);
       }
     }
   }

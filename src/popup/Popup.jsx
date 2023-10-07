@@ -38,7 +38,6 @@ export const Popup = () => {
     const domDocument = parseDom.parseFromString(tabHTML, 'text/html')
     const availableScripts = await extractAvailableScriptsFromNode(domDocument)
     if(availableScripts){
-      
       setScripts(availableScripts)
       setLoading(false)
     }
@@ -48,7 +47,7 @@ export const Popup = () => {
     setLoading(true);
     const uniqueArr = [];
     for (let x in scripts) {
-       uniqueArr.push(await findHardcodedJavaScriptParams(scripts[x], 'parameter_scanner'));
+      uniqueArr.push(await findHardcodedJavaScriptParams(scripts[x], 'parameter_scanner'));
     }
 
     const filteredData = uniqueArr.filter(col => col.words !== '')
